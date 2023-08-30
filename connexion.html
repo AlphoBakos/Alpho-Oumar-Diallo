@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    
+    <section>
+    <div class="connexion">
+        <form action="#">
+            <h2>Connexion</h2>
+            <div class="entree">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="entree">
+                <input type="password" name="password" required>
+                <label>Mot de passe</label>
+            </div>
+
+            <div class="souvenir">
+                <label><input type="checkbox" class="vue">Voir mot de passe</label>
+            </div>
+
+            <button type="submit">Connexion</button>
+
+            <div class="inscription">
+                <p>Je n'ai pas de compte !
+                    <a href="./pages/inscription.html">S'inscrire</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+    </section>
+    
+    <script>
+        const passwordInput = document.querySelector('input[name="password"]');
+        const showPasswordButton = document.querySelector('.vue');
+
+        showPasswordButton.addEventListener('click' , () => {
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        });
+    </script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.ems.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,173 @@
+.{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.body1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./img/184757.jpg');
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('./img/FB_IMG_1645571893395.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animation 5s linear infinite;
+}
+
+@keyframes animation {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.connexion {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+.enregistrement {
+    position: relative;
+    width: 400px;
+    height: 650px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.entree {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+}
+
+.entree label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.entree input:focus~label,
+.entree input:valid~label {
+    top: -5px;
+}
+
+.entree input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+
+.souvenir {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.souvenir label input {
+    margin-right: 3px;
+}
+
+.souvenir a {
+    color: white;
+    text-decoration: none;  
+}
+
+.souvenir a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #000;
+    font-weight: 500;
+}
+
+.inscription {
+    font-size: .9em;
+    color:  white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.inscription p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.inscription p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 360px) {
+    .connexion {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .entree {
+        width: 250px;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscription</title>
+    <link rel="stylesheet" href="../Style.css">
+</head>
+
+<body>
+    
+    <section>
+    <div class="enregistrement">
+        <form action="#">
+
+            <h2>Inscrption</h2>
+
+            <div class="entree">
+                <input type="text" required>
+                <label>Nom</label>
+            </div>
+
+            <div class="entree">
+                <input type="text" required>
+                <label>Prenom</label>
+            </div>
+
+            <div class="entree">
+                <input type="date" required>
+            </div>
+
+            <div class="entree">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="entree">
+                <input type="password" name="password" required>
+                <label>Mot de passe</label>
+            </div>
+
+            <div class="souvenir">
+                <label><input type="checkbox" class="vue">Voir mot de passe</label>
+            </div>
+    
+            <button type="submit">Enregistrer</button>
+
+        </form>
+    </div>
+    </section>
+    
+    <script>
+        const passwordInput = document.querySelector('input[name="password"]');
+        const showPasswordButton = document.querySelector('.vue');
+
+        showPasswordButton.addEventListener('click' , () => {
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.ems.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+</html>
